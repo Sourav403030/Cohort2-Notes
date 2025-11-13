@@ -206,6 +206,41 @@ typeof function() {};     // "function" ✅ Special case
 typeof null               // "object" (JS bug)
 ```
 
+## 👉 Operations in Objects
+
+- `Object.freeze()` - Prevents any changes to the Object.
+    - ❌ No adding new properties.
+    - ❌ No deleting properties.
+    - ❌ No modifying existing values.
+- Use when you want the Object to be fully locked.
+
+```js
+const obj = { a: 10 };
+Object.freeze(obj);
+obj.a = 50;     // ❌ no effect
+```
+- `Object.seal()` - Prevents adding or deleting properties.
+    - ✅ Allows modifying exisiting values.
+
+```js
+const obj = { a: 10 };
+Object.seal(obj);
+obj.a = 50;   // ✔ allowed
+obj.b = 20;   // ❌ not allowed
+```
+- `this` keyword - Refers to the Object that is calling the function.
+
+```js
+const user = {
+  name: "Sourav",
+  showName() {
+    console.log(this.name);
+  }
+};
+
+user.showName();  // "Sourav"
+```
+
 ## 👉 Working with Strings
 
 - `slice()` - Used to extract a part of the String.
