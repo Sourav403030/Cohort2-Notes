@@ -77,6 +77,40 @@ function userInfo({ name, age }) {
 userInfo({ name: "Sourav", age: 22 });
 ```
 
+## ❗️ Types of Arguments
+
+- `Positional Arguments` - These are the normal arguments you pass in order. The position matters.
+
+```js
+function intro(name, age) {
+  console.log(name, age);
+}
+
+intro("Sourav", 22);  
+```
+
+- `Default Arguments` - These are the arguments that have a default value if nothing is passed.
+
+```js
+function greet(name = "Guest") {
+  console.log("Hello " + name);
+}
+
+greet("Sourav");  // Hello Sourav
+greet();          // Hello Guest
+```
+
+- `Spread Arguments` - Spread `...` expands an array into individual arguments.
+
+```js
+function add(a, b, c) {
+  console.log(a + b + c);
+}
+
+const nums = [1, 2, 3];
+
+add(...nums); // same as add(1, 2, 3)
+```
 
 ## ❗️Return values
 
@@ -106,6 +140,45 @@ const add = (a, b) => {
   return a + b;
 };
 ```
+
+## ❗️ Anonymous Function
+
+- A Function without a name.
+  - Callbacks
+  - setTimeout
+  - Array Methods
+
+```js
+() => { }
+
+// OR
+
+function () { }
+```
+
+## ❗️ Pure Function
+
+- A function that -
+  - Returns the same output for the same input
+  - Doesnot change anything outside itself (no side effects)
+
+```js
+function add(a, b) {
+  return a + b;
+}
+```
+
+## ❗️ Impure Function
+
+- A function that - 
+  - Changes something outside itself
+  - **OR** gives different results with the same input
+
+```js
+let x = 10;
+function change() { x = 20; }   // modifies outside (impure)
+```
+
 
 ## ❗️Default values and Rest operator
 
