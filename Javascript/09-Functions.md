@@ -36,6 +36,48 @@ greet("Roy");
 - `name` is a parameter.
 - `Roy` is an argument.
 
+## ❗️ Types of Parameters
+
+- `Required Parameters` - These are the parameters that a function expects you to pass. If you don't pass them, they become **undefined**.
+
+```js
+function greet(name) {
+  console.log("Hello " + name);
+}
+
+greet("Sourav");   // Hello Sourav
+greet();           // Hello undefined
+```
+
+- `Default Parameters` - These gives a default value if the argument is **not passed** or is **undefined**.
+
+```js
+function greet(name = "Guest") {
+  console.log("Hello " + name);
+}
+
+greet("Sourav");   // Hello Sourav
+greet();           // Hello Guest
+```
+- `Rest Parameters` - Collects multiple arguments into a single array using `...`
+```js
+function add(...numbers) {
+  return numbers.reduce((total, n) => total + n, 0);
+}
+
+console.log(add(1, 2, 3, 4));  // 10
+```
+- `Destructured Parameters` - Allows you to pass Objects or Arrays and pick only the values you need.
+
+```js
+function userInfo({ name, age }) {
+  console.log(`${name} is ${age} years old`);
+}
+
+userInfo({ name: "Sourav", age: 22 });
+```
+
+
 ## ❗️Return values
 
 - return sends back a result to wherever the function was called.

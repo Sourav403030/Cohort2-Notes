@@ -105,3 +105,31 @@ console.log(x); // ✅ 5
 console.log(y); // ❌ ReferenceError
 console.log(z); // ❌ ReferenceError
 ```
+
+## 👉 Important Values in Javascript
+
+- `undefined` - A variable exists, but no value has been assigned to it.
+
+```js
+let a;
+console.log(a); // undefined
+```
+- `null` - Intentional absence of value **OR** A value that you manually set to show **"nothing here"**.
+
+```js
+let user = null;  // user exists, but has no value
+```
+
+- `NaN (Not a Number)` - The result of an Invalid number operation.
+
+```js
+Number("abc");    // NaN
+0 / 0;            // NaN
+"hi" * 5;         // NaN
+```
+- `Infinity` - A numeric value representing infinite magnitude.
+
+```js
+1 / 0        // Infinity
+Infinity > 99999999  // true
+```
