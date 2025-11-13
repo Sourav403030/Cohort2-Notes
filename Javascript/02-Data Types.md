@@ -205,3 +205,46 @@ typeof [];                // "object"  ✅ Arrays are objects
 typeof function() {};     // "function" ✅ Special case
 typeof null               // "object" (JS bug)
 ```
+
+## 👉 Working with Strings
+
+- `slice()` - Used to extract a part of the String.
+
+```js
+const name = "JavaScript";
+console.log(name.slice(0, 4)); // "Java"
+```
+
+- `Template Literals` - Used to write strings in a clean, modern way using backticks `, with ${value} for variables.
+
+```js
+const name = "Sourav";
+const msg = `Hello, ${name}! Welcome to JavaScript.`;
+console.log(msg);
+```
+
+- `split()` - Converts a string into an array based on a operator.
+
+```js
+const text = "a,b,c,d";
+console.log(text.split(",")); 
+// ["a", "b", "c", "d"]
+```
+
+- `replace()` - Replaces a part of the string with something else.
+
+```js 
+const str = "I like Java";
+console.log(str.replace("Java", "JavaScript"));
+// "I like JavaScript"
+```
+
+- `includes()` - Checks if a string contains a substring.
+
+```js
+const text = "Learning JavaScript";
+console.log(text.includes("Java")); // true
+console.log(text.includes("Python")); // false
+```
+
+
